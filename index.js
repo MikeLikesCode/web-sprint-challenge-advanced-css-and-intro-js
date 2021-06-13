@@ -362,8 +362,6 @@ function randomize(array){
     // Loop through the array and look at each item that it has.
   for(let i=-1; i < array.length; i++){
     let randomIndex = Math.floor(Math.random(0,array.length) * array.length);
-    console.log(array);
-    console.log(array.length)
     newArray.push(array.splice(randomIndex,1));
   }
 
@@ -375,6 +373,7 @@ function randomize(array){
   return newArray
     } 
 
+console.log(randomize(data));
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
