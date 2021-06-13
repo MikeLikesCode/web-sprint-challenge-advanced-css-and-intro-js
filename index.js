@@ -350,21 +350,31 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
-
-    /* Code here */
-
-  }
+function getHTML(data){
+}
 
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
+function randomize(array){  
+  let newArray = [];
+    // Loop through the array and look at each item that it has.
+  for(let i=-1; i < array.length; i++){
+    let randomIndex = Math.floor(Math.random(0,array.length) * array.length);
+    console.log(array);
+    console.log(array.length)
+    newArray.push(array.splice(randomIndex,1));
   }
+
+  //Adding last remaning number since loop doesnt want to use random[0,1]
+  if(array.length == 1){
+      newArray.push(array);
+  }
+
+  return newArray
+    } 
+
 
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
